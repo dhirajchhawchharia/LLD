@@ -1,3 +1,4 @@
+package UI;
 interface IButton {
     void press(String msg);
 }
