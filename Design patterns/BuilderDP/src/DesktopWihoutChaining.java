@@ -12,7 +12,7 @@ class Desktop {
 }
 
 abstract class Builder {
-    protected Desktop desktop = new Desktop();
+    protected Desktop desktop;
 
     public abstract void buildRam();
     public abstract void buildProcessor();
@@ -48,6 +48,7 @@ class DellBuilder extends Builder {
 }
 
 class Director {
+
     public Desktop buildDesktop(Builder builder) {
         builder.buildRam();
         builder.buildMonitor();
