@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Resource {
-    Connection mysqlConnection;
+    public  Connection mysqlConnection;
 
-    public Resource() {
+    public  Resource() {
         try {
             mysqlConnection = DriverManager.getConnection("abc.xyz.com");
         } catch (Exception e) {

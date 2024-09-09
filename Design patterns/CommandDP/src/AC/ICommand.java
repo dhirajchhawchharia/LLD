@@ -8,5 +8,6 @@ public abstract class ICommand {
     }
 
     
-    abstract public void execute(); 
+    abstract public void execute();
+    abstract public void undo();
 }

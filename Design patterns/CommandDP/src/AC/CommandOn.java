@@ -10,4 +10,9 @@ public class CommandOn extends ICommand {
     public void execute() {
         ac.turnOn();
     }
+
+    @Override
+    public void undo() {
+        ac.turnOff();
+    }
 }
