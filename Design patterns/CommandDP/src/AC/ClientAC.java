@@ -7,15 +7,17 @@ public class ClientAC {
         airConditioner.turnOn();
         airConditioner.turnOff();
 
-        ICommand command = new CommandOn(airConditioner);
-        command.execute();
+        RemoteControl remoteControl = new RemoteControl();
 
-        command = new CommandSetTemp(airConditioner, 17);
-        command.execute();
+        remoteControl.setCommand(new CommandOn(airConditioner));
+        remoteControl.pressButton();
 
-        command = new CommandOff(airConditioner);
-        command.execute();
+        remoteControl.setCommand(new CommandSetTemp(airConditioner, 17));
+        remoteControl.pressButton();
 
-        command.undo();
+        remoteControl.setCommand(new CommandOff(airConditioner));
+        remoteControl.pressButton();
+
+        remoteControl.undo();
     }
 }
